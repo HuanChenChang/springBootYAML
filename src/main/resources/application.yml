@@ -1,0 +1,27 @@
+spring:
+    mail:
+        host: email-smtp.XXXXX.com
+        port: 465
+        protocol: smtps
+        username: XXXXXX
+        password: XXXXXX
+        properties:
+            mail.transport.protocol: smtps 
+            mail.smtps.auth: true
+            mail.smtps.starttls.enable: true
+            
+    messages:
+        basename: i18n/messages
+        cache-seconds: 0
+            
+common:
+    dirs:
+        home-dir: ${common.home:.}
+        tmp-dir: ${common.dirs.home-dir}/tmp
+        
+    email:
+        enabled: true
+        from: noreply@XXXXX.com
+        from.alias: Test On Demand
+        to: v-neilchang@XXXXX.com
+        cc: v-neilchang@XXXXX.com
